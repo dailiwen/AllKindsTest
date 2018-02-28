@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.dailiwen.allkindstest.activity.MainActivity">
+
+    <Button
+        android:id="@+id/QRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="二维码识别"/>
+
+    <Button
+        android:id="@+id/UpData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="软件硬更新"/>
+
+    <Button
+        android:id="@+id/Glide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图片加载框架"/>
+
+    <Button
+        android:id="@+id/EventBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EventBus"/>
+
+    <TextView
+        android:id="@+id/StickyShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="先点击上方按钮进入另一个活动，点击粘性事件发送，看效果。然后依次再点击下方按钮"/>
+
+    <Button
+        android:id="@+id/EventBusSticky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EventBus粘性事件注册"/>
+
+    <Button
+        android:id="@+id/Mina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mina"/>
+
+    <Button
+        android:id="@+id/Netty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Netty"/>
+
+    <Button
+        android:id="@+id/Jackson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jackson"/>
+</LinearLayout>

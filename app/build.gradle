@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.dailiwen.allkindstest"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:multidex:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //Android注解式绑定控件BindView
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //18.01.24 二维码扫描
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.2.1'
+    implementation 'pub.devrel:easypermissions:1.1.2'
+    //18.01.26 Glide图片加载框架
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //18.01.30 EventBus是一款针对Android优化的发布/订阅事件总线
+    compile 'org.greenrobot:eventbus:3.1.1'
+    //mina包导入
+    implementation files('libs/mina-core-2.0.16.jar')
+    implementation files('libs/log4j-1.2.17.jar')
+    //18.02.26 Netty包导入
+    implementation files('libs/netty-all-4.1.22.Final.jar')
+    //18.02.27 Jackson包导入
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.9.4'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.4'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.9.4'
+}
